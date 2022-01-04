@@ -1,0 +1,35 @@
+CREATE DATABASE students;
+use students;
+CREATE TABLE users (student_name varchar(45), student_email varchar(40));
+
+INSERT INTO users VALUES ('ABC', 'ABC@gmail.com');
+
+INSERT INTO users (student_name) VALUES ('AAAA');
+
+INSERT INTO users (student_name, student_email) VALUES ('BBBB', 'BBBB@gmail.com'), ('CCCC', 'cccc@mail.com');
+
+SELECT * FROM students_db;
+
+ADD new column=>
+ALTER TABLE users ADD gender varchar(10);
+
+RENAME table=>
+ALTER TABLE users RENAME students_db;
+
+MODIFY column=>
+ALTER TABLE students_db MODIFY COLUMN student_email varchar(100);
+
+DROP column=>
+ALTER TABLE students_db DROP COLUMN gender;
+RENAME column=>
+ALTER TABLE students_db RENAME COLUMN gender TO student_gender;
+
+UPDATE query=>
+SET SQL_SAFE_UPDATES=0;
+UPDATE students_db SET student_email='ABCD@mail.com' WHERE student_name='ABCD';
+
+DELETE query=>
+
+DELETE FROM students_db;
+
+SELECT * FROM students_db;
